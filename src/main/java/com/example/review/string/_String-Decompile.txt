@@ -1,0 +1,72 @@
+Compiled from "_String.java"
+public class com.example.review.string._String {
+  public com.example.review.string._String();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+        //String a, b, c 的初始化
+       0: ldc           #17                 // String who
+       2: astore_1
+       3: ldc           #18                 // String  are
+       5: astore_2
+       6: ldc           #19                 // String  you?
+       8: astore_3
+
+        //  String str1 = a + b + c; 的初始化
+       9: new           #2                  // class java/lang/StringBuilder
+      12: dup
+      13: invokespecial #3                  // Method java/lang/StringBuilder."<init>":()V
+      16: aload_1
+      17: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      20: aload_2
+      21: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      24: aload_3
+      25: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      28: invokevirtual #12                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      31: astore        4
+
+        // String str2 = "who" + " are" + " you"; 的初始化
+      33: ldc           #20                 // String who are you
+      35: astore        5
+
+        // String str3 = a + " are" + " you"; 的初始化
+      37: new           #2                  // class java/lang/StringBuilder
+      40: dup
+      41: invokespecial #3                  // Method java/lang/StringBuilder."<init>":()V
+      44: aload_1
+      45: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      48: ldc           #21                 // String  are you
+      50: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      53: invokevirtual #12                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      56: astore        6
+
+        // String str4 = "who" + b + " you"; 的初始化
+      58: new           #2                  // class java/lang/StringBuilder
+      61: dup
+      62: invokespecial #3                  // Method java/lang/StringBuilder."<init>":()V
+      65: ldc           #17                 // String who
+      67: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      70: aload_2
+      71: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      74: ldc           #22                 // String  you
+      76: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      79: invokevirtual #12                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      82: astore        7
+
+        // String str5 = "who" + " are" + c; 的初始化
+      84: new           #2                  // class java/lang/StringBuilder
+      87: dup
+      88: invokespecial #3                  // Method java/lang/StringBuilder."<init>":()V
+      91: ldc           #23                 // String who are
+      93: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      96: aload_3
+      97: invokevirtual #5                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     100: invokevirtual #12                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     103: astore        8
+
+     105: return
+}
