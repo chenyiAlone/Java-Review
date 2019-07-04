@@ -3,7 +3,7 @@ package com.example.review.operator;
  * ClassName: Bit.java
  * Author: chenyiAlone
  * Create Time: 2019/7/3 20:11
- * Description: 测试委员算操作符
+ * Description: 测试按位操作符
  */
 public class Bit {
 
