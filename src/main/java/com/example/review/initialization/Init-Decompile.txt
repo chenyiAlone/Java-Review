@@ -1,0 +1,24 @@
+Compiled from "Init.java"
+public class com.example.review.initialization.Init {
+  public static void main(java.lang.String[]);
+    Code:
+       0: new           #2                  // class com/example/review/initialization/Init
+       3: dup
+
+        /* 1. 调用 Init() 构造器 */
+       4: invokespecial #3                  // Method "<init>":()V
+       7: astore_1
+       8: aload_1
+
+        /* 2. 调用对象的非静态方法 */
+       9: invokespecial #4                  // Method method:()V
+      12: aload_1
+      13: pop
+
+        /* 3. 通过对象引用调用静态方法 */
+      14: invokestatic  #5                  // Method staticMethod:()V
+
+        /* 4. 直接调用静态方法 */
+      17: invokestatic  #5                  // Method staticMethod:()V
+      20: return
+}
