@@ -40,6 +40,8 @@ public class _String {
             1. 连续的""直接字符串会如同 33 行，将连续的 ""直接字符串使用 ldc 一次性完成加载
             2. 存在 String 对象引用的拼接都会先 new StringBuilder 并完成初始化，使用 StringBuilder.append(String str)
                 来拼接单个 String 或者是连续的 ""直接字符串
+            3. 每一个拼接串表达式比如 str = "" + "" 或者 str += "" 这种，都会创建一个 StringBuilder 对象来拼接字符串
+                代码的证明在 ByteCode1，和 ByteCode1-Decompile.txt 反编译字节码中
     */
     private static void strSplice() {
         String a = "who";
@@ -89,10 +91,32 @@ public class _String {
         System.out.println("s3 == s4: " + (s3 == s4));
     }
 
+    private static void constPool() {
+        String a = "123";
+        String b = new String("123");
+        System.out.println("a == b: " + (a == b));
+        System.out.println("a == b.intern(): " + (a == b.intern()));
+
+        String c = new String("456");
+        String d = "456";
+        System.out.println("c == d: " + (c == d));
+        System.out.println("c.intern() == d: " + (c.intern() == d));
+
+        /*///:~
+
+            a == b: false
+            a == b.intern(): true
+
+            c == d: false
+            c == d.intern(): true
+         */
+    }
+
     public static void main(String[] args) {
-        addOperator();  // 字符创拼接
-        stringPool1();  // String 常量池 1
-        stringPool2();  // String 常量池 2
+//        addOperator();  // 字符创拼接
+//        stringPool1();  // String 常量池 1
+//        stringPool2();  // String 常量池 2
+        constPool();
     }
 
 }
