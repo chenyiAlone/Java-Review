@@ -11,7 +11,10 @@ public class Init {
 
     private Init() {}
     private void method() {}
-    private static void staticMethod() {}
+    private static void staticMethod() {
+//!        static int i = 0;
+    }
+
 
     public static void main(String[] args) {
         Init init = new Init(); // 调用 new Init()    => invokespecial
