@@ -13,11 +13,11 @@ public class Final {
     private final int initVal;
 
     private Final() {
-//！        init();  // 必须直接在构造器中完成初始化
+//！        initialization();  // 必须直接在构造器中完成初始化
         initVal = 1;
     }
     /*
-    在构造器中，调用初 init() 始化方法中实现初始化是不可行的！ x
+    在构造器中，调用初 initialization() 始化方法中实现初始化是不可行的！ x
     */
     private final void init() {
 //!        this.initVal = 2;
