@@ -71,9 +71,43 @@ public class This {
         System.out.println(_this);
     }
 
+
+    class Inner {
+        private void innerTest() {
+            this.test();
+            test();
+            This.this.test();
+            int i = 1;
+        }
+        private void test() {
+            System.out.println("inner class test");
+        }
+    }
+    private void test() {
+        System.out.println("out class test");
+    }
+
+    /*
+    测试 ClassName.this 的作用
+        当外部类的方法和内部类的方法的重名的时候，ClassName.this 用于锁定外部类对象，进而可以调用外部类的成员变量和方法
+        test() 和 this.test() 都会调用当前对象的方法，即内部类对象，所以都是调用了内部类的成员变量和方法
+     */
+    private static void classNameThis() {
+        Inner inner = new This().new Inner();
+        inner.innerTest();
+        /*///:~
+
+            inner class test
+            inner class test
+            out class test
+         */
+    }
+
+
     public static void main(String[] args) {
 //        asReturnVal();
-        thisObjRef();
+//        thisObjRef();
+        classNameThis();
     }
 
 }

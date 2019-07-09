@@ -1,4 +1,4 @@
-package com.example.review.initialization;
+package com.example.review.initialization.order;
 /**
  * ClassName: Init.java
  * Author: chenyiAlone
