@@ -1,4 +1,4 @@
-package com.example.review._extends;
+package com.example.review.polymorphic._extends;
 /**
  * ClassName: Extends.java
  * Author: chenyiAlone

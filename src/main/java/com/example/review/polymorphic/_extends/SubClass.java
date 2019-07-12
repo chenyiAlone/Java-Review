@@ -1,4 +1,4 @@
-package com.example.review._extends;
+package com.example.review.polymorphic._extends;
 /**
  * ClassName: SubClass.java
  * Author: chenyiAlone
