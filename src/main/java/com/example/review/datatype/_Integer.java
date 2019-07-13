@@ -50,10 +50,16 @@ public class _Integer {
          */
     }
 
-
+    private static void floatEquals() {
+        System.out.println(3 * 0.1);
+        System.out.println(0.3);
+        System.out.println(3 * 0.1 == 0.3);
+        System.out.println(3 * 0.1F == 0.3);
+    }
 
     public static void main(String[] args) {
 //        initialization();             // 1. 测试初始化和自动拆箱源码分析
-        integerCache();     // 2. 测试缓存池
+//        integerCache();     // 2. 测试缓存池
+        floatEquals();
     }
 }
