@@ -1,5 +1,7 @@
 package com.example.review.string;
 
+import static com.example.util.Utils.log;
+
 /**
  * ClassName: _String.java
  * Author: chenyiAlone
@@ -53,9 +55,9 @@ public class _String {
         String str4 = "who" + b + " you";
         String str5 = "who" + " are" + c;
     }
+
     /*
     测试 intern() 方法以及 String 常量池的性质 1
-
 
     */
     private static void stringPool1() {
@@ -91,6 +93,10 @@ public class _String {
         System.out.println("s3 == s4: " + (s3 == s4));
     }
 
+    /*
+    测试字符创常量池，"" 字面量字符串会不会在常量池中创建对象
+    以及两个方法顺序颠倒的测试
+    */
     private static void constPool() {
         String a = "123";
         String b = new String("123");
@@ -112,11 +118,54 @@ public class _String {
          */
     }
 
+    /* 测试 new String() 创建的对象 */
+    private static void newStringTest() {
+        String s1 = new String("123");
+        String s2 = "123";
+
+        log("s1 == s2: " + (s1 == s2));
+        log("s1.intern() == \"123\": " + (s1.intern() == "123"));
+
+
+        String s3 = "234";
+        s3.intern();
+        String s4 = new String("234");
+
+        log("s3 == s4: " + (s3 == s4));
+        log("s3 == s4.intern(): " + (s3 == s4.intern()));
+
+        /*
+
+            s1 == s2: false
+            s1.intern() == "123": true
+            s3 == s4: false
+            s3 == s4.intern(): true
+        *///:~
+    }
+
+    /*
+    思考：StringBuilder # append 会在字符串常量池中创建对象么? (?)
+        没想明白该怎么测试
+     */
+    private static void literalTest() {
+        String str = "123";
+//        log("\"123\" == str.intern(): " + ("123" == str.intern()));
+        log("str.intern() == \"123\" : " + (str.intern() == "123"));
+
+
+        StringBuilder strs = new StringBuilder();
+        String str2 = strs.append("45").append("67").toString();
+        log("\"4567\" == str2.intern() : " + ("4567" == str2.intern()));
+//        log("str.intern() == \"123\" : " + (str.intern() == "123"));
+    }
+
     public static void main(String[] args) {
 //        addOperator();  // 字符创拼接
 //        stringPool1();  // String 常量池 1
 //        stringPool2();  // String 常量池 2
-        constPool();
+//        constPool();
+        newStringTest();  // new String() 来创建字符串对象
+//        literalTest();
     }
 
 }
