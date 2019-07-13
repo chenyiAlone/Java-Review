@@ -7,8 +7,13 @@ package com.example.review.initialization.passivereference;
  */
 class SubClass extends SuperClass {
     static final int subStaticFinalValue = 120;
-
+    static final int  subStaticFinalValue2 = initFinalVal();
     static {
         System.out.println("subclass static block");
+    }
+
+    private static int initFinalVal() {
+        System.out.println("init final value2");
+        return 10;
     }
 }
