@@ -3,7 +3,7 @@ package com.example.util;
  * ClassName: Utils.java
  * Author: chenyiAlone
  * Create Time: 2019/7/12 9:29
- * Description: 
+ * Description: 工具类
  */
 public class Utils {
 
