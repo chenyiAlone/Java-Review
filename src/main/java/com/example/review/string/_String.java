@@ -159,13 +159,31 @@ public class _String {
 //        log("str.intern() == \"123\" : " + (str.intern() == "123"));
     }
 
+    /*
+    测试 "" 和 null 是否等价
+        印证了 equals() 的比较原则，一个对象跟 null 进行比较的的结果永远是 null
+    */
+    private static void emptyNull() {
+        String str = "";
+        log("str == null: " + (str == null));
+        log("str.equals(null): " + str.equals(null));
+
+        /* Output:
+
+            str == null: false
+            str.equals(null): false
+        *///:~
+    }
+
+
     public static void main(String[] args) {
 //        addOperator();  // 字符创拼接
 //        stringPool1();  // String 常量池 1
 //        stringPool2();  // String 常量池 2
 //        constPool();
-        newStringTest();  // new String() 来创建字符串对象
+//        newStringTest();  // new String() 来创建字符串对象
 //        literalTest();
+        emptyNull();      // 测试 空串 "" 和 null
     }
 
 }

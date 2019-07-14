@@ -25,6 +25,11 @@ public class Utils {
         return log(str, ln, '?', 2);
     }
 
+    public static String log(String str, boolean ln, int w) {
+        return log(str, ln, '?', w);
+    }
+
+
     /**
      * 包装 str
      * ---------- str ----------
