@@ -80,8 +80,8 @@ public class Extends {
 
     }
     public static void main(String[] args) {
-        extendsSuperAndSubMethod();     // 测试方法的覆盖
-//        extendsSuperAndSubMember();     // 测试成员变量的覆盖
+//        extendsSuperAndSubMethod();     // 测试方法的覆盖
+        extendsSuperAndSubMember();     // 测试成员变量的覆盖
 //        int[] arr = {1, 2, 3};
 
 

@@ -7,7 +7,7 @@ package com.example.review.polymorphic._extends;
  */
 public class SubClass extends SuperClass {
 
-    int value = 1;
+    protected int value = 1;
 
     void printValues() {
         System.out.println("sub class printValues:");
@@ -27,5 +27,7 @@ public class SubClass extends SuperClass {
         System.out.println("sub ----------> super method:");
         super.method();
     }
+
+//!    protected void perm() {}     // 重写方法的权限不能低于被重写的方法的权限
 
 }

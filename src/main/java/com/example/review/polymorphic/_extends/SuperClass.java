@@ -7,7 +7,7 @@ package com.example.review.polymorphic._extends;
  */
 public class SuperClass {
 
-    int value = 0;
+    public int value = 0;
 
     void printValues() {
         System.out.println("super class printValues:");
@@ -19,4 +19,7 @@ public class SuperClass {
         System.out.println("super method()");
     }
 
+    public void perm() {
+        System.out.println("super perm()");
+    }
 }
