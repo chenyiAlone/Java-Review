@@ -3,7 +3,7 @@ package com.example.review.polymorphic.innerclass;
 import static com.example.util.Utils.log;
 
 /**
- * ClassName: InnerClass.java
+ * ClassName: InnerClass1.java
  * Author: chenyiAlone
  * Create Time: 2019/7/14 18:08
  * Description: 测试各种内部类
@@ -30,8 +30,8 @@ public class InnerClass {
             log("value: " + value);
             log("this.value: " + this.value);
             log("RememberInnerClass.this.value: " + RememberInnerClass.this.value);
-            log("InnerClass.this.value: " + InnerClass.this.value);
-//!            log("InnerClass.this.value: " + OutClass.this.value);    // 编译器提示 OutClass 不是一个封闭的类
+            log("InnerClass1.this.value: " + InnerClass.this.value);
+//!            log("InnerClass1.this.value: " + OutClass.this.value);    // 编译器提示 OutClass 不是一个封闭的类
         }
 
     }
@@ -83,7 +83,7 @@ public class InnerClass {
             value: 2
             this.value: 2
             RememberInnerClass.this.value: 2
-            InnerClass.this.value: 10
+            InnerClass1.this.value: 10
         *///:~
     }
 

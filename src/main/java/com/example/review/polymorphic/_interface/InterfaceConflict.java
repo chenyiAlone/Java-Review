@@ -10,6 +10,7 @@ package com.example.review.polymorphic._interface;
  *
  */
 public class InterfaceConflict {
+
     interface Inter1 { void f(); }
     interface Inter2 { void f(); }
     interface Inter3 extends Inter1 { void f(); }
