@@ -22,7 +22,33 @@ public class InterfaceConflict {
     interface Inter7 { default void f() {} }
     interface Inter8 extends Inter6 { void f(); }
 //!    interface Inter9 extends Inter6, Inter7 {}
-    interface Inter10 extends Inter6, Inter7 { void f(); }
+    interface Inter10 extends Inter6, Inter7 { void f(); }  // 必须重写，两种方式均可
     interface Inter11 extends Inter6, Inter7 { default void f() {} }
+
+
+    interface Inter15 extends Inter1, Inter6 {  // 必须重写，两种方式均可
+//        default void f() {}
+        void f();
+    }
+
+    class class1 implements Inter1 {
+        @Override
+        public void f() {}
+    }
+
+    class class2 implements Inter1, Inter2 {
+        @Override
+        public void f() {}
+    }
+
+    class class3 implements Inter1, Inter6 {
+        @Override
+        public void f() {}
+    }
+
+    class class4 implements Inter6, Inter7 {
+        @Override
+        public void f() {}
+    }
 
 }
