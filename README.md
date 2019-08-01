@@ -32,3 +32,25 @@
 ### 多态
 
 - [继承](src/main/java/com/example/review/polymorphic/_extends)
+
+- [泛型](src/main/java/com/example/review/polymorphic/generic)
+
+    - [泛型捕获转化](src/main/java/com/example/review/polymorphic/generic/Catch.java)
+    
+    - [泛型容器写法](src/main/java/com/example/review/polymorphic/generic/Container.java)
+    
+    - [协变和逆变](src/main/java/com/example/review/polymorphic/generic/CovariationAndInversion.java)
+    
+    - [泛型擦除](src/main/java/com/example/review/polymorphic/generic/Erase.java)
+    
+    - [泛型边界](src/main/java/com/example/review/polymorphic/generic/GenericBound.java)
+    
+    - [泛型机制](src/main/java/com/example/review/polymorphic/generic/GenericMechanism.java)
+    
+    - [泛型推断](src/main/java/com/example/review/polymorphic/generic/Infer.java)
+    
+    - [潜在类型补偿](src/main/java/com/example/review/polymorphic/generic/PotentialType.java)
+    
+    - [自限定类型](src/main/java/com/example/review/polymorphic/generic/SelfBound.java)
+    
+    - [通配符](src/main/java/com/example/review/polymorphic/generic/Wildcard.java)
