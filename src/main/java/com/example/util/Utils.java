@@ -84,4 +84,20 @@ public class Utils {
         return ret.toString();
     }
 
+    /**
+     * 打印数组
+     * @param arr
+     * @param <T>
+     * @return
+     */
+    public static <T> String printArr(T[] arr) {
+        StringBuilder ret = new StringBuilder("[");
+        for (T t : arr) {
+            ret.append(t).append(", ");
+        }
+        ret.setLength(ret.length() - 2);
+        ret.append("]");
+        log(ret.toString());
+        return ret.toString();
+    }
 }
