@@ -1,0 +1,23 @@
+Compiled from "Holder.java"
+public class com.example.review.polymorphic.generic.democlass.Holder<T> {
+  T t;
+
+  public com.example.review.polymorphic.generic.democlass.Holder();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public void set(T);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: putfield      #2                  // Field t:Ljava/lang/Object;
+       5: return
+
+  public T get();
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field t:Ljava/lang/Object;
+       4: areturn
+}
