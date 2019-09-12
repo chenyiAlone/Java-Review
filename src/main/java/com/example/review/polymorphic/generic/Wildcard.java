@@ -1,8 +1,8 @@
 package com.example.review.polymorphic.generic;
 
-import com.example.review.polymorphic.generic.democlass.Holder;
-import com.example.review.polymorphic.generic.democlass.Sub;
-import com.example.review.polymorphic.generic.democlass.Super;
+import com.example.util.democlass.Holder;
+import com.example.util.democlass.Sub;
+import com.example.util.democlass.Super;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -91,8 +91,8 @@ public class Wildcard {
 
         /* Output:
 
-            us: com.example.review.polymorphic.generic.democlass.Sub@2f4d3709
-            ls: com.example.review.polymorphic.generic.democlass.Sub@2f4d3709
+            us: com.example.util.democlass.Sub@2f4d3709
+            ls: com.example.util.democlass.Sub@2f4d3709
         *///:~
 
     }

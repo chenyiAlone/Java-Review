@@ -1,4 +1,7 @@
 package com.example.review.initialization.passivereference;
+
+import static com.example.util.Utils.log;
+
 /**
  * ClassName: Test.java
  * Author: chenyiAlone
@@ -67,10 +70,22 @@ public class Test {
         Class clazz = SubClass.class;
     }
 
+
+    /*
+    测试创建引用不调用 new 会不会触发类加载
+        1. Type t = null 不会触发类加载
+    */
+    private static void reference() {
+        SubClass subClass = null;
+    }
+
+
+
     public static void main(String[] args) {
 //        subClassUseSuperStaticParam();  // 1. 调用子类中集成父类的静态属性
 //        array();                    // 2. 创建指定类型的数组
-        staticFinalParam();     // 3. static final 的属性
+//        staticFinalParam();     // 3. static final 的属性
 //        classObject();      // 4. 调用类的 class 属性
+        reference();    // 5.
     }
 }

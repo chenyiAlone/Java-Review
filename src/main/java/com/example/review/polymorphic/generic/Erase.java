@@ -1,7 +1,5 @@
 package com.example.review.polymorphic.generic;
 
-import com.example.review.polymorphic.generic.democlass.Super;
-
 import java.util.ArrayList;
 
 import static com.example.util.Utils.log;

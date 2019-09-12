@@ -1,10 +1,7 @@
 package com.example.review.polymorphic.generic;
 
-import com.example.review.polymorphic.generic.democlass.Sub;
-import com.example.review.polymorphic.generic.democlass.Super;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.util.democlass.Sub;
+import com.example.util.democlass.Super;
 
 /**
  * ClassName: CovariationAndInversion.java

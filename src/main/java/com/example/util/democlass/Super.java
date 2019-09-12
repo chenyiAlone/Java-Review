@@ -1,4 +1,4 @@
-package com.example.review.polymorphic.generic.democlass;
+package com.example.util.democlass;
 
 public class Super {
 

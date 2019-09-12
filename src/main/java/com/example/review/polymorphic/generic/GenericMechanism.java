@@ -1,6 +1,6 @@
 package com.example.review.polymorphic.generic;
 
-import com.example.review.polymorphic.generic.democlass.Holder;
+import com.example.util.democlass.Holder;
 /**
  * ClassName: GenericMechanism.java
  * Author: chenyiAlone

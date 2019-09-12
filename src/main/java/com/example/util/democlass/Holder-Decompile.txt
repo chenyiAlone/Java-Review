@@ -1,8 +1,8 @@
 Compiled from "Holder.java"
-public class com.example.review.polymorphic.generic.democlass.Holder<T> {
+public class com.example.util.democlass.Holder<T> {
   T t;
 
-  public com.example.review.polymorphic.generic.democlass.Holder();
+  public com.example.util.democlass.Holder();
     Code:
        0: aload_0
        1: invokespecial #1                  // Method java/lang/Object."<init>":()V

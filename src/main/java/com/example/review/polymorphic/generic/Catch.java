@@ -1,11 +1,7 @@
 package com.example.review.polymorphic.generic;
 
-import com.example.review.polymorphic.generic.democlass.Holder;
-import com.example.review.polymorphic.generic.democlass.Sub;
-import com.example.review.polymorphic.generic.democlass.Super;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.util.democlass.Holder;
+import com.example.util.democlass.Sub;
 
 import static com.example.util.Utils.log;
 
