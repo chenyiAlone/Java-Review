@@ -5,8 +5,7 @@ import com.example.util.democlass.*;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.example.util.Utils.log;
-import static com.example.util.Utils.printArr;
+import static com.example.util.Utils.*;
 
 /**
  * ClassName: Array.java
@@ -111,11 +110,39 @@ public class Array {
         log(Arrays.deepToString(arrNesting));
     }
 
+    private static void arrayCompare() {
+        int[] a = {1}, b = {1}, c = null;
+        Integer[] a1 = new Integer[2], a2 = new Integer[2];
+        log("" + Arrays.equals(a1, a2));
+    }
+    /*
+    测试 Arrays # copyOf 和 System # arraycopy
+        1. System # arraycopy 对相同数组进行拷贝的时候前面的已经复制的值不会出现覆盖情况
+        2. Arrays # copyOf 返回的是一个长度指定为 newLength 的新数组
+    */
+    private static void systemArrayCopy() {
+        Integer[] arrSc = {1, 2, 3, 4, 5, 6};
+        System.arraycopy(arrSc, 0, arrSc, 2, arrSc.length - 2);
+        printArr(arrSc);
+
+        Integer[] arr = {1, 2, 3};
+        arr = Arrays.copyOf(arr, 4);
+        printArr(arr);
+
+        /* Output:
+
+            [1, 2, 1, 2, 3, 4]
+            [1, 2, 3, null]
+        *///:~
+    }
+
     public static void main(String[] args) {
 //        asList();
 //        arrayCreate();
-        arrayInit();
+//        arrayInit();
 //        arrayToString();
+//        arrayCompare();
+        systemArrayCopy();
     }
 
 }
